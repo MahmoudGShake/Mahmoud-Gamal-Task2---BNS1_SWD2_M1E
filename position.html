@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Using Position</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .sidebar {
+            background-color: #f4f4f4;
+            padding: 15px;
+            width: 25%;
+            position: fixed;
+            top: 60px;
+            bottom: 40px;
+            overflow-y: auto;
+        }
+        .main-content {
+            margin-left: 25%;
+            padding: 15px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Header
+    </div>
+    <div class="sidebar">
+        Some content for the sidebar
+    </div>
+    <div class="main-content">
+        <h2>Main Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna vitae libero ullamcorper consectetur. Sed viverra, mi in elementum finibus, nulla lorem vehicula turpis, in luctus lacus arcu nec ipsum. Integer nec metus nec leo laoreet commodo. Sed laoreet ligula in auctor dictum. Integer dolor ligula enim, at tincidunt sem turpis nec lacus.</p>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+</body>
+</html>
